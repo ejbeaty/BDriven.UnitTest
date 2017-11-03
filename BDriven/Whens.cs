@@ -8,7 +8,7 @@ namespace BDriven.UnitTest
 {
     public class Whens
     {
-        private Dictionary<string, Func<object>> MethodCalls = new Dictionary<string, Func<object>>();
+        private Dictionary<string, Func<object[], object>> MethodCalls = new Dictionary<string, Func<object[], object>>();
 
         public Givens Given;
         public Exception Exception { get; private set; }
@@ -21,6 +21,11 @@ namespace BDriven.UnitTest
 
         internal void Register(string actionName, Func<object> action)
         {
+            Func<object[], object> actionWithEmptyArgs = (args) => { return action(); };
+            this.MethodCalls.Add(actionName, actionWithEmptyArgs);
+        }
+        internal void Register(string actionName, Func<object[],object> action)
+        {
             this.MethodCalls.Add(actionName, action);
         }
         public void I(string methodName)
@@ -28,7 +33,21 @@ namespace BDriven.UnitTest
             var action = MethodCalls[methodName];
             try
             {
-                this.ResponseObject = action();
+                var emptyArgs = new object[0];
+                this.ResponseObject = action(emptyArgs);
+            }
+            catch (Exception e)
+            {
+                this.Exception = e;
+            }
+        }
+
+        public void I(string methodName, params object[] withArgs)
+        {
+            var action = MethodCalls[methodName];
+            try
+            {
+                this.ResponseObject = action(withArgs);
             }
             catch (Exception e)
             {

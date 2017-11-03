@@ -23,6 +23,10 @@ namespace BDriven.UnitTest
         {
             this.when.Register(actionName, action);
         }
+        public void RegisterBehavior(string actionName, Func<object[],object> action)
+        {
+            this.when.Register(actionName, action);
+        }
         public IEnumerable<T> MyGivenItems<T>()
         {
             return this.given.Items<T>();
