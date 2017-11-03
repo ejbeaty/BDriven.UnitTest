@@ -1,0 +1,13 @@
+c:\users\elliott\documents\visual studio 2017\Projects\BDriven\BDriven\obj\Debug\BDriven.csproj.CoreCompileInputs.cache
+c:\users\elliott\documents\visual studio 2017\Projects\BDriven\BDriven\bin\Debug\BDriven.dll
+c:\users\elliott\documents\visual studio 2017\Projects\BDriven\BDriven\bin\Debug\BDriven.pdb
+c:\users\elliott\documents\visual studio 2017\Projects\BDriven\BDriven\bin\Debug\xunit.abstractions.dll
+c:\users\elliott\documents\visual studio 2017\Projects\BDriven\BDriven\bin\Debug\xunit.assert.dll
+c:\users\elliott\documents\visual studio 2017\Projects\BDriven\BDriven\bin\Debug\xunit.core.dll
+c:\users\elliott\documents\visual studio 2017\Projects\BDriven\BDriven\bin\Debug\xunit.execution.desktop.dll
+c:\users\elliott\documents\visual studio 2017\Projects\BDriven\BDriven\bin\Debug\xunit.abstractions.xml
+c:\users\elliott\documents\visual studio 2017\Projects\BDriven\BDriven\bin\Debug\xunit.assert.xml
+c:\users\elliott\documents\visual studio 2017\Projects\BDriven\BDriven\bin\Debug\xunit.core.xml
+c:\users\elliott\documents\visual studio 2017\Projects\BDriven\BDriven\bin\Debug\xunit.execution.desktop.xml
+c:\users\elliott\documents\visual studio 2017\Projects\BDriven\BDriven\obj\Debug\BDriven.dll
+c:\users\elliott\documents\visual studio 2017\Projects\BDriven\BDriven\obj\Debug\BDriven.pdb

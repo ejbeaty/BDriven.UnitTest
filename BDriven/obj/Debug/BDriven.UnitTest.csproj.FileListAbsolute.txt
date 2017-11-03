@@ -1,0 +1,14 @@
+C:\Users\Elliott\Documents\Github\BDriven\BDriven\bin\Debug\BDriven.UnitTest.dll
+C:\Users\Elliott\Documents\Github\BDriven\BDriven\bin\Debug\BDriven.UnitTest.pdb
+C:\Users\Elliott\Documents\Github\BDriven\BDriven\bin\Debug\xunit.abstractions.dll
+C:\Users\Elliott\Documents\Github\BDriven\BDriven\bin\Debug\xunit.assert.dll
+C:\Users\Elliott\Documents\Github\BDriven\BDriven\bin\Debug\xunit.core.dll
+C:\Users\Elliott\Documents\Github\BDriven\BDriven\bin\Debug\xunit.execution.desktop.dll
+C:\Users\Elliott\Documents\Github\BDriven\BDriven\bin\Debug\xunit.abstractions.xml
+C:\Users\Elliott\Documents\Github\BDriven\BDriven\bin\Debug\xunit.assert.xml
+C:\Users\Elliott\Documents\Github\BDriven\BDriven\bin\Debug\xunit.core.xml
+C:\Users\Elliott\Documents\Github\BDriven\BDriven\bin\Debug\xunit.execution.desktop.xml
+C:\Users\Elliott\Documents\Github\BDriven\BDriven\obj\Debug\BDriven.UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Elliott\Documents\Github\BDriven\BDriven\obj\Debug\BDriven.UnitTest.csproj.CoreCompileInputs.cache
+C:\Users\Elliott\Documents\Github\BDriven\BDriven\obj\Debug\BDriven.UnitTest.dll
+C:\Users\Elliott\Documents\Github\BDriven\BDriven\obj\Debug\BDriven.UnitTest.pdb
