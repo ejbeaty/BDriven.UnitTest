@@ -127,6 +127,12 @@ namespace BDriven.UnitTest
             Assert.Equal(expectedValue, actualValue);
             return this;
         }
+        public ObjectInstance IsAnEmptyCollection()
+        {
+            var actualValue = GetPropertyValue(_propertyPath);
+            Assert.Empty((IEnumerable)actualValue);
+            return this;
+        }
         public ObjectInstance IsNot<T>(T value)
         {
             var actualValue = GetPropertyValue(_propertyPath);
