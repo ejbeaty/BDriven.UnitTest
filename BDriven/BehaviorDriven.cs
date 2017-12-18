@@ -31,10 +31,5 @@ namespace BDriven.UnitTest
         {
             return this.given.Items<T>();
         }
-        public T MyGivenItem<T>() 
-        {
-            return this.given.Item<T>();
-        }
-
     }
 }

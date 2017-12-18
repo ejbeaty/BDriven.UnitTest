@@ -9,7 +9,6 @@ namespace BDriven.UnitTest
     public class Givens
     {
         private GenericCollectionDictionary _collectionDict = new GenericCollectionDictionary();
-        private GenericItemDictionary _singleItemDict = new GenericItemDictionary();
         
         internal IEnumerable<T> Items<T>()
         {
@@ -21,42 +20,19 @@ namespace BDriven.UnitTest
 
             return classInstances;
         }
-        internal T Item<T>()
+        
+        public ObjectBuilder IHaveA<T>()
         {
-            T item = default(T);
-            if (_singleItemDict.KeyExists<T>())
-            {
-                item = _singleItemDict.Get<T>();
-            }
-
-            return item;
-        }
-        public ObjectInstance IHaveA<T>()
-        {
-            var obj = new ObjectInstance(GetInstance(typeof(T)));
-
-            // Add it to the dict for when we only need one of this type for the test
-            _singleItemDict.Add<T>(obj);
+            var obj = new ObjectBuilder(GetInstance(typeof(T)));
 
             // Add it to the collection dictionary as well, so if they use given.IHaveAnother(), it's already there in the dictionary
             _collectionDict.Add<T>(obj);
 
             return obj;
         }
-        public ObjectInstance IHaveA<T>(T value)
+        public ObjectBuilder IHaveA<T>(T value)
         {
-            var obj = new ObjectInstance(value);
-            // Add it to the dict for when we only need one of this type for the test
-            _singleItemDict.Add<T>(obj);
-
-            // Add it to the collection dictionary as well, so if they use given.IHaveAnother(), it's already there in the dictionary
-            _collectionDict.Add<T>(obj);
-
-            return obj;
-        }
-        public ObjectInstance IHaveAnother<T>()
-        {
-            var obj = new ObjectInstance(GetInstance(typeof(T)));
+            var obj = new ObjectBuilder(value);
 
             // Add it to the collection dictionary as well, so if they use given.IHaveAnother(), it's already there in the dictionary
             _collectionDict.Add<T>(obj);
@@ -69,7 +45,7 @@ namespace BDriven.UnitTest
             {
                 var classInstance = new T();
                 
-                _collectionDict.Add<T>(new ObjectInstance(classInstance));
+                _collectionDict.Add<T>(new ObjectBuilder(classInstance));
             }
             return this.Items<T>();
         }
@@ -168,13 +144,13 @@ namespace BDriven.UnitTest
 
     internal class GenericCollectionDictionary
     {
-        private Dictionary<Type, List<ObjectInstance>> _dict = new Dictionary<Type, List<ObjectInstance>>();
+        private Dictionary<Type, List<ObjectBuilder>> _dict = new Dictionary<Type, List<ObjectBuilder>>();
 
-        public void Add<T>(ObjectInstance objectInstance)
+        public void Add<T>(ObjectBuilder objectInstance)
         {
             if (!this.KeyExists<T>())
             {
-                var newObjectCollection = new List<ObjectInstance>();
+                var newObjectCollection = new List<ObjectBuilder>();
                 _dict.Add(typeof(T), newObjectCollection);
             }
             _dict[typeof(T)].Add(objectInstance);
@@ -182,7 +158,7 @@ namespace BDriven.UnitTest
 
         public bool KeyExists<T>()
         {
-            List<ObjectInstance> objectCollection = null;
+            List<ObjectBuilder> objectCollection = null;
             if (_dict.TryGetValue(typeof(T), out objectCollection))
             {
                 return true;
@@ -194,7 +170,7 @@ namespace BDriven.UnitTest
         }
         public IEnumerable<T> Get<T>()
         {
-            List<ObjectInstance> objectCollection = null;
+            List<ObjectBuilder> objectCollection = null;
             if (_dict.TryGetValue(typeof(T), out objectCollection))
             {
                 foreach (var item in objectCollection)
@@ -211,9 +187,9 @@ namespace BDriven.UnitTest
     }
     internal class GenericItemDictionary
     {
-        private Dictionary<Type, ObjectInstance>  _dict = new Dictionary<Type, ObjectInstance>();
+        private Dictionary<Type, ObjectBuilder>  _dict = new Dictionary<Type, ObjectBuilder>();
 
-        public void Add<T>(ObjectInstance classInstance)
+        public void Add<T>(ObjectBuilder classInstance)
         {
             var type = typeof(T);
             if (!this.KeyExists<T>())
@@ -227,7 +203,7 @@ namespace BDriven.UnitTest
         }
         public bool KeyExists<T>()
         {
-            ObjectInstance item = null;
+            ObjectBuilder item = null;
             if (_dict.TryGetValue(typeof(T), out item))
             {
                 return true;
@@ -239,7 +215,7 @@ namespace BDriven.UnitTest
         }
         public T Get<T>()
         {
-            ObjectInstance item = null;
+            ObjectBuilder item = null;
             if (_dict.TryGetValue(typeof(T), out item))
             {
                 return (T)item.Instance;

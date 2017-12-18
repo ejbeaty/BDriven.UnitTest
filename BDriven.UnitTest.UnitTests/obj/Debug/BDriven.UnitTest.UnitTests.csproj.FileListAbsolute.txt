@@ -1,13 +1,15 @@
+C:\Users\Elliott\Documents\Github\BDriven\BDriven.UnitTest.UnitTests\bin\Debug\xunit.abstractions.dll
+C:\Users\Elliott\Documents\Github\BDriven\BDriven.UnitTest.UnitTests\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Elliott\Documents\Github\BDriven\BDriven.UnitTest.UnitTests\bin\Debug\xunit.runner.reporters.net452.dll
+C:\Users\Elliott\Documents\Github\BDriven\BDriven.UnitTest.UnitTests\bin\Debug\xunit.runner.utility.net452.dll
 C:\Users\Elliott\Documents\Github\BDriven\BDriven.UnitTest.UnitTests\bin\Debug\BDriven.UnitTest.UnitTests.dll.config
 C:\Users\Elliott\Documents\Github\BDriven\BDriven.UnitTest.UnitTests\bin\Debug\BDriven.UnitTest.UnitTests.dll
 C:\Users\Elliott\Documents\Github\BDriven\BDriven.UnitTest.UnitTests\bin\Debug\BDriven.UnitTest.UnitTests.pdb
 C:\Users\Elliott\Documents\Github\BDriven\BDriven.UnitTest.UnitTests\bin\Debug\BDriven.UnitTest.dll
-C:\Users\Elliott\Documents\Github\BDriven\BDriven.UnitTest.UnitTests\bin\Debug\xunit.abstractions.dll
 C:\Users\Elliott\Documents\Github\BDriven\BDriven.UnitTest.UnitTests\bin\Debug\xunit.assert.dll
 C:\Users\Elliott\Documents\Github\BDriven\BDriven.UnitTest.UnitTests\bin\Debug\xunit.core.dll
 C:\Users\Elliott\Documents\Github\BDriven\BDriven.UnitTest.UnitTests\bin\Debug\xunit.execution.desktop.dll
 C:\Users\Elliott\Documents\Github\BDriven\BDriven.UnitTest.UnitTests\bin\Debug\BDriven.UnitTest.pdb
-C:\Users\Elliott\Documents\Github\BDriven\BDriven.UnitTest.UnitTests\bin\Debug\xunit.abstractions.xml
 C:\Users\Elliott\Documents\Github\BDriven\BDriven.UnitTest.UnitTests\bin\Debug\xunit.assert.xml
 C:\Users\Elliott\Documents\Github\BDriven\BDriven.UnitTest.UnitTests\bin\Debug\xunit.core.xml
 C:\Users\Elliott\Documents\Github\BDriven\BDriven.UnitTest.UnitTests\bin\Debug\xunit.execution.desktop.xml

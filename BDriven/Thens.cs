@@ -40,15 +40,15 @@ namespace BDriven.UnitTest
             expectation((T)this.When.ResponseObject);
         }
 
-        public ObjectInstance IExpectAResponse<T>()
+        public ObjectValidator IExpectAResponse<T>()
         {
             Assert.Null(When.Exception);
             var responseObject = When.ResponseObject;
             Assert.NotNull(responseObject);
             Assert.Equal(typeof(T), responseObject.GetType());
-            return new ObjectInstance(responseObject);
+            return new ObjectValidator(responseObject);
         }
-        public ObjectInstance IExpectAResponse<T>(T expectedValue)
+        public ObjectValidator IExpectAResponse<T>(T expectedValue)
         {
             Assert.Null(When.Exception);
             var responseObject = When.ResponseObject;
@@ -56,7 +56,7 @@ namespace BDriven.UnitTest
             Assert.Equal(typeof(T), responseObject.GetType());
             Assert.Equal(expectedValue, responseObject);
 
-            return new ObjectInstance(responseObject);
+            return new ObjectValidator(responseObject);
         }
 
         public object IExpectAResponse(Type responseType)
